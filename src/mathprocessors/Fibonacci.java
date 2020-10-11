@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Fibonacci {
 
-    /**fibRecursive is a function that uses recursion to split the number given to it down into a series of 1s and 0s. then adds the ones back together
-     * in order to get the number associated with that integer in the fibonacci sequence
+    /**fibRecursive is a function that uses recursion to split the number given to it down into a series of 1s and 0s.
+     * then adds the ones back together in order to get the number associated with that integer in the fibonacci sequence
      *
      * @param seqSpot
      * @return
@@ -21,7 +21,8 @@ public class Fibonacci {
     }
 
     /**fibRecursiveTimer is used to call fibRecursive a specified number of times and time each step of the process
-     * to use it it must be passed an upper limit of the sequence you want to see. it passes each integer to fib recursive and times just how long it takes to
+     * to use it it must be passed an upper limit of the sequence you want to see.
+     * it passes each integer to fib recursive and times just how long it takes to
      * calculate the number in the sequence in nanoseconds before returning that data in the form of an arraylist
      *
      * @param upperLimit
