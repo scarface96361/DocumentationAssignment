@@ -14,7 +14,37 @@ public class Fibonacci {
         return fibRecursive(seqSpot - 1) +fibRecursive( seqSpot -2);
     }
 
-    public void fibnonRecursive(int upperlimit){
+    public ArrayList<Long> fibrecursivetimer( int upperLimit){
+        ArrayList<Long> timelist = new ArrayList<Long>();
+        int xCount = 0;
+
+        long startTime;
+        long endTime;
+        long finalTime;
+
+        long fibTemp;
+
+        while (xCount < upperLimit){
+            xCount++;
+            startTime = System.nanoTime();
+
+            //running the recursive function
+            fibTemp = fibRecursive(xCount);
+
+            endTime = System.nanoTime();
+            //calculating final time
+            finalTime = endTime - startTime;
+
+            timelist.add(finalTime);
+
+            //printing out the input and final time of each fibonacci number
+            System.out.println("Time taken: " + finalTime +" number returned: " + fibTemp + " Iteration: " + xCount);
+
+        }
+        return timelist;
+    }
+
+    public ArrayList<Long> fibnonRecursive(int upperlimit){
         //the first integer for the fibonaci sequence math
         long x1 =0;
         //the second number for the fibonacci sequence math
@@ -26,6 +56,8 @@ public class Fibonacci {
         long startTime =0;
         long endTime =0;
         long finaltime = 0;
+
+        ArrayList<Long> timelist = new ArrayList<Long>();
 
 
         int c = 0;
@@ -43,9 +75,12 @@ public class Fibonacci {
             finaltime = endTime- startTime;
 
             System.out.println("Time taken: " + finaltime+" number returned: " + Xfib + " Iteration: " + c);
+
+            timelist.add(finaltime);
             c++;
 
         }
+        return timelist;
     }
 
 }
