@@ -22,6 +22,10 @@ public class Main extends Application {
 
 
     @Override
+    /**This is the start class for the primary javaFX thread that is used to call the recursive and non recursive methods and then
+     * add their outputs to a chart for the javaFX api to display
+     *
+     */
     public void start(Stage stage) throws Exception {
         //this following section retrieves all the numbers needed for program launch
 
@@ -35,7 +39,7 @@ public class Main extends Application {
 
 
         //creating and filling arraylists with the times
-        ArrayList<Long> recursionTimes = fibpro.fibrecursivetimer(xCount);
+        ArrayList<Long> recursionTimes = fibpro.fibRecursiveTimer(xCount);
         ArrayList<Long> nonRecursionTimes = fibpro.fibnonRecursive(xCount);
 
 
